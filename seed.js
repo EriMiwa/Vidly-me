@@ -38,9 +38,11 @@ const data = [
   }
 ];
 
+require('dotenv').config();
+const uri = process.env.ATLAS_URI;
 async function seed() {
-  await mongoose.connect(config.get("db"));
-
+  // await mongoose.connect(config.get("db"));
+  await mongoose.connect(uri);
   await Movie.deleteMany({});
   await Genre.deleteMany({});
 
