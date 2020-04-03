@@ -1,12 +1,13 @@
 {
-  "name": "vidly",
+  "name": "vidly-node",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "seed": "node seed.js",
-    "test": "jest --watchAll --verbose"
+    "test": "jest --watchAll --verbose",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -33,5 +34,8 @@
   "devDependencies": {
     "jest": "^22.2.2",
     "supertest": "^3.0.0"
+  },
+  "engines": {
+    "node": "12.10.0"
   }
 }
